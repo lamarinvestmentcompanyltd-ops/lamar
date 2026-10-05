@@ -1,0 +1,102 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Health &amp; Safety — Lamar Investment Company Ltd{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(90deg, rgba(10,53,88,0.72) 0%, rgba(10,53,88,0.48) 40%, rgba(10,53,88,0.15) 68%, rgba(10,53,88,0.0) 92%), url('{% static 'core/img/hero-cart.png' %}'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="page-hero-eyebrow">Lamar Investment Company Ltd</span>
+    <h1>Health &amp; Safety</h1>
+      <p class="page-hero-lede">The standards behind every job, not just the visible result.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{% url 'home' %}">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Health &amp; Safety</span>
+    </nav>
+  </div>
+  <span class="page-hero-dots"></span>
+  <span class="page-hero-rule"></span>
+</section>
+
+<div class="trust-bar">
+  <div class="container">
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+      PPE-equipped teams
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12.75 11.25 15 15 9.75"/><circle cx="12" cy="12" r="9"/></svg>
+      Site rules followed
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1z"/><path d="M8 4H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/><path d="m9 12 2 2 4-4"/></svg>
+      Every incident logged
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Trained, supervised staff
+    </span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="ribbon-rule"></div>
+      <h2>Our Safety Protocol</h2>
+      <p>Four checkpoints every job passes through, from the products we bring to how we close it out.</p>
+    </div>
+
+    <div class="protocol-grid">
+      <article class="protocol-card">
+        <span class="step-watermark">01</span>
+        <div class="protocol-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H4a1 1 0 0 0-1 1v5c0 5.5 3.8 9.7 9 11 5.2-1.3 9-5.5 9-11V4a1 1 0 0 0-1-1h-5"/><path d="M12 8v4"/><path d="M9.5 5.5 12 8l2.5-2.5"/></svg>
+        </div>
+        <h3>Product safety</h3>
+        <p>Cleaning agents are chosen for the surface and setting they're used on, with attention to spaces used by children, patients, or food handling.</p>
+      </article>
+
+      <article class="protocol-card">
+        <span class="step-watermark">02</span>
+        <div class="protocol-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+        </div>
+        <h3>Staff protection</h3>
+        <p>Team members are equipped with the protective gear appropriate to the job, from routine cleaning to deep and post-construction work.</p>
+      </article>
+
+      <article class="protocol-card">
+        <span class="step-watermark">03</span>
+        <div class="protocol-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1z"/><path d="M8 4H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+        </div>
+        <h3>Site protocols</h3>
+        <p>For institutional and commercial sites, our teams follow the access, timing, and safety rules set by the property — no shortcuts.</p>
+      </article>
+
+      <article class="protocol-card">
+        <span class="step-watermark">04</span>
+        <div class="protocol-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+        </div>
+        <h3>Incident response</h3>
+        <p>If anything unexpected comes up on site, it's reported to the client directly and addressed before the job is considered complete.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Have specific health &amp; safety requirements?</h2>
+        <p>Tell us about your site and we'll confirm how our protocols apply before the first visit.</p>
+      </div>
+      <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+/* Lamar admin dashboard — brand-matched stat cards.
+   Uses the same palette/fonts as the public site so the admin doesn't feel
+   like a bolted-on generic Bootstrap panel. */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --lamar-blue: #1c75bc;
+  --lamar-blue-deep: #0f4a7a;
+  --lamar-accent: #1c75bc;
+  --lamar-tint: #a6c9e4;
+  --lamar-ivory: #f7f9fb;
+  --lamar-line: rgba(28, 117, 188, 0.14);
+}
+
+.lamar-stats-wrap {
+  margin-bottom: 28px;
+}
+
+.lamar-stats-heading {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--lamar-blue-deep);
+  margin: 0 0 4px;
+}
+
+.lamar-stats-subheading {
+  font-family: 'Work Sans', sans-serif;
+  color: #5b6168;
+  font-size: 0.9rem;
+  margin: 0 0 18px;
+}
+
+.lamar-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.lamar-stat-card {
+  background: #fff;
+  border: 1px solid var(--lamar-line);
+  border-radius: 6px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 1px 3px rgba(28, 117, 188, 0.06);
+}
+
+.lamar-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(28, 117, 188, 0.12);
+  border-color: var(--lamar-accent);
+}
+
+.lamar-stat-card .icon {
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--lamar-blue) 0%, var(--lamar-blue-deep) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.lamar-stat-card.highlight .icon {
+  background: linear-gradient(135deg, #111 0%, #333 100%);
+  color: #fff;
+}
+
+.lamar-stat-card .value {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--lamar-blue-deep);
+  line-height: 1.1;
+}
+
+.lamar-stat-card.highlight .value {
+  color: var(--lamar-accent);
+}
+
+.lamar-stat-card .label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.82rem;
+  color: #5b6168;
+  margin-top: 2px;
+}
+
+@media (max-width: 576px) {
+  .lamar-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}

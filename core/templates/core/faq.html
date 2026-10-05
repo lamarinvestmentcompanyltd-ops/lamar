@@ -1,0 +1,73 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Frequently Asked Questions — Lamar Investment Company Ltd{% endblock %}
+{% block meta_description %}Answers to common questions about Lamar Investment Company's cleaning services in Kigali — pricing, coverage area, supplies, safety, and booking.{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(90deg, rgba(10,53,88,0.72) 0%, rgba(10,53,88,0.48) 40%, rgba(10,53,88,0.15) 68%, rgba(10,53,88,0.0) 92%), url('{% static 'core/img/hero-cart.png' %}'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="page-hero-eyebrow">Lamar Investment Company Ltd</span>
+    <h1>FAQ</h1>
+      <p class="page-hero-lede">Common questions about our services, pricing, and booking.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{% url 'home' %}">Home</a>
+      <span class="sep">/</span>
+      <span class="current">FAQ</span>
+    </nav>
+  </div>
+  <span class="page-hero-dots"></span>
+  <span class="page-hero-rule"></span>
+</section>
+
+<section>
+  <div class="container">
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What cleaning services do you offer?</h3>
+        <p>We handle four categories: commercial (offices &amp; retail), residential (homes &amp; apartments), institutional (schools, churches, hospitals, and government offices), and specialized cleaning (deep cleans, post-construction, post-event, carpet cleaning, and washroom sanitation). See our <a href="{% url 'services' %}">Services page</a> for the full breakdown.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which areas do you serve?</h3>
+        <p>We're based in Kigali (Kicukiro, Niboye) and serve clients across the city.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I get a quote?</h3>
+        <p>Fill out the form on our <a href="{% url 'contact' %}">Contact page</a> with a few details about the space, and we'll follow up with a quote — usually the same business day.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you bring your own supplies and equipment?</h3>
+        <p>Yes — our teams arrive with the cleaning products and equipment needed for the job, chosen with the surface and setting in mind.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are your health and safety standards?</h3>
+        <p>We follow set protocols for product safety, staff protection, and site rules — especially in schools, clinics, and other sensitive spaces. See our <a href="{% url 'health_safety' %}">Health &amp; Safety page</a> for the full breakdown.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I book a one-time clean, or only recurring service?</h3>
+        <p>Both — we do one-off deep cleans and recurring contracts (daily, weekly, or a custom schedule), whichever fits what you need.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are your business hours?</h3>
+        <p>We're open every day, 7:00 AM – 11:00 PM. Most inquiries get a reply the same business day.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I reach you directly?</h3>
+        <p>Email <a href="mailto:info@lamarinvestment.rw">info@lamarinvestment.rw</a>, call <a href="tel:+250799529500">+250 799 529 500</a>, or use the <a href="{% url 'contact' %}">Contact page</a> form. You can also reach us on WhatsApp from the Contact page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Still have a question?</h2>
+        <p>Reach out directly and we'll get back to you the same day.</p>
+      </div>
+      <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

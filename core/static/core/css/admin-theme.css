@@ -1,0 +1,17 @@
+/* Lamar brand blue (#1C75BC) for the Jazzmin admin — overrides the stock green "success" colour. */
+:root {
+  --lamar-blue: #1c75bc;
+  --lamar-blue-deep: #0f4a7a;
+}
+.bg-success, .navbar-success, .btn-success, .badge-success,
+.sidebar-dark-success .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-dark-success .nav-sidebar .nav-treeview > .nav-item > .nav-link.active {
+  background-color: var(--lamar-blue) !important;
+  border-color: var(--lamar-blue) !important;
+  color: #fff !important;
+}
+.btn-success:hover { background-color: var(--lamar-blue-deep) !important; border-color: var(--lamar-blue-deep) !important; }
+.text-success, a { --bs-link-color: var(--lamar-blue); }
+.page-item.active .page-link { background-color: var(--lamar-blue); border-color: var(--lamar-blue); }
+.form-control:focus { border-color: var(--lamar-blue); box-shadow: 0 0 0 .2rem rgba(28,117,188,.2); }
+.login-page, .login-box .card-primary.card-outline { border-top-color: var(--lamar-blue); }

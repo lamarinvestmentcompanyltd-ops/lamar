@@ -1,0 +1,62 @@
+[
+  {
+    "model": "core.teammember",
+    "pk": 1,
+    "fields": {
+      "name": "Uwase Jeanine",
+      "role": "Operations Manager",
+      "photo": "team/uwase_jeanine.jpg",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.teammember",
+    "pk": 2,
+    "fields": {
+      "name": "Murenzi Charles",
+      "role": "Client Relations Officer",
+      "photo": "team/murenzi_charles.jpg",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.teammember",
+    "pk": 3,
+    "fields": {
+      "name": "Manzi Jimmy",
+      "role": "Site Supervisor",
+      "photo": "team/manzi_jimmy.jpg",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.partner",
+    "pk": 1,
+    "fields": {
+      "name": "RSSB",
+      "logo": "partners/rssb.png",
+      "website": "",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.partner",
+    "pk": 2,
+    "fields": {
+      "name": "RBA",
+      "logo": "partners/rba.png",
+      "website": "",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.partner",
+    "pk": 3,
+    "fields": {
+      "name": "NESA",
+      "logo": "partners/nesa.png",
+      "website": "",
+      "order": 3
+    }
+  }
+]

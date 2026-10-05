@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+{% block title %}Page Not Found — Lamar Investment Company Ltd{% endblock %}
+{% block content %}
+
+<section>
+  <div class="container">
+    <div class="error-page">
+      <div class="ribbon-rule"></div>
+      <h1>Page not found</h1>
+      <p>The page you're looking for doesn't exist, or the link's out of date.</p>
+      <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

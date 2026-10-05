@@ -1,0 +1,66 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Our Work — Lamar Investment Company Ltd{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(90deg, rgba(10,53,88,0.72) 0%, rgba(10,53,88,0.48) 40%, rgba(10,53,88,0.15) 68%, rgba(10,53,88,0.0) 92%), url('{% static 'core/img/hero-cart.png' %}'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="page-hero-eyebrow">Lamar Investment Company Ltd</span>
+    <h1>Our Work</h1>
+      <p class="page-hero-lede">A look at the results, not just the description.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{% url 'home' %}">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Our Work</span>
+    </nav>
+  </div>
+  <span class="page-hero-dots"></span>
+  <span class="page-hero-rule"></span>
+</section>
+
+<section>
+  <div class="container">
+    {% if items %}
+      <div class="gallery-grid">
+        {% for item in items %}
+          {% if item.type == "pair" %}
+            <div class="gallery-pair">
+              <div class="gallery-pair-imgs">
+                <div class="gallery-pair-img">
+                  <img src="{{ item.before.image.url }}" alt="{{ item.before.caption|default:'Before' }}">
+                  <span class="gallery-tag">Before</span>
+                </div>
+                <div class="gallery-pair-img">
+                  <img src="{{ item.after.image.url }}" alt="{{ item.after.caption|default:'After' }}">
+                  <span class="gallery-tag gallery-tag-after">After</span>
+                </div>
+              </div>
+              {% if item.after.caption %}<p class="gallery-caption">{{ item.after.caption }}</p>{% endif %}
+            </div>
+          {% else %}
+            <div class="gallery-single">
+              <img src="{{ item.photo.image.url }}" alt="{{ item.photo.caption|default:'Our work' }}">
+              {% if item.photo.caption %}<p class="gallery-caption">{{ item.photo.caption }}</p>{% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Photos from recent jobs will appear here soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Want results like these?</h2>
+        <p>Tell us about the space and we'll put a plan together.</p>
+      </div>
+      <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

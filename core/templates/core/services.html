@@ -1,0 +1,183 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Our Services — Lamar Investment Company Ltd{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(90deg, rgba(10,53,88,0.72) 0%, rgba(10,53,88,0.48) 40%, rgba(10,53,88,0.15) 68%, rgba(10,53,88,0.0) 92%), url('{% static 'core/img/hero-cart.png' %}'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="page-hero-eyebrow">Lamar Investment Company Ltd</span>
+    <h1>Our Services</h1>
+      <p class="page-hero-lede">Four categories of work, each scoped to the property it&#39;s for.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{% url 'home' %}">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Our Services</span>
+    </nav>
+  </div>
+  <span class="page-hero-dots"></span>
+  <span class="page-hero-rule"></span>
+</section>
+
+<div class="trust-bar">
+  <div class="container">
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      4 service categories
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Trained, supervised teams
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+      Products &amp; equipment included
+    </span>
+    <span class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Scheduled around you
+    </span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="service-grid">
+
+      <article class="service-card">
+        <span class="service-index">01</span>
+        <div class="service-card-media">
+          <img class="service-slide" src="{% static 'core/img/services/commercial-cleaner.jpg' %}" alt="Cleaner using a water-fed pole system to clean commercial building windows">
+          <img class="service-slide" src="{% static 'core/img/services/commercial-office.jpg' %}" alt="Bright, clean shared office space with wooden desks">
+          <img class="service-slide" src="{% static 'core/img/services/commercial.jpg' %}" alt="Modern commercial office building exterior">
+          <span class="service-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+            Commercial
+          </span>
+        </div>
+        <div class="service-card-body">
+          <h3>Commercial Cleaning</h3>
+          <p class="service-card-sub">Offices &amp; retail</p>
+          <p>Cleaning programs for offices, shops, and commercial floors, scheduled to fit around business hours.</p>
+          <ul>
+            <li>Office cleaning, daily, weekly, or custom-frequency</li>
+            <li>Building maintenance cleaning</li>
+            <li>Reception and lobby cleaning</li>
+            <li>Corridor and staircase cleaning</li>
+            <li>Window cleaning</li>
+          </ul>
+          <a href="{% url 'contact' %}?service=commercial" class="service-card-link">
+            Request this service
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <span class="service-index">02</span>
+        <div class="service-card-media slides-2">
+          <img class="service-slide" src="{% static 'core/img/services/residential-living-room.jpg' %}" alt="Elegant, well-furnished living room in a home">
+          <img class="service-slide" src="{% static 'core/img/services/residential.jpg' %}" alt="Cleaning crew deep-cleaning the floors of a home">
+          <span class="service-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            Residential
+          </span>
+        </div>
+        <div class="service-card-body">
+          <h3>Residential Cleaning</h3>
+          <p class="service-card-sub">Homes &amp; apartments</p>
+          <p>Recurring or one-time cleaning for houses and apartments, covering the full home each visit.</p>
+          <ul>
+            <li>House cleaning</li>
+            <li>Apartment cleaning</li>
+            <li>Move-in and move-out cleaning</li>
+            <li>Deep cleaning services</li>
+          </ul>
+          <a href="{% url 'contact' %}?service=residential" class="service-card-link">
+            Request this service
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <span class="service-index">03</span>
+        <div class="service-card-media">
+          <img class="service-slide" src="{% static 'core/img/services/institutional-classroom.jpg' %}" alt="Empty classroom with rows of wooden desks and chairs">
+          <img class="service-slide" src="{% static 'core/img/services/institutional-factory.jpg' %}" alt="Lamar cleaner mopping the floor of a factory facility">
+          <img class="service-slide" src="{% static 'core/img/services/institutional-cleaning.jpg' %}" alt="Lamar cleaner wiping down a wall and skirting board">
+          <span class="service-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 10-10-5L2 10l10 5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+            Institutional
+          </span>
+        </div>
+        <div class="service-card-body">
+          <h3>Institutional Cleaning</h3>
+          <p class="service-card-sub">Schools &amp; facilities</p>
+          <p>Cleaning contracts built for schools, clinics, and larger institutions where hygiene standards are non-negotiable.</p>
+          <ul>
+            <li>Schools and universities</li>
+            <li>Churches and religious institutions</li>
+            <li>Hospitals and health centers</li>
+            <li>Government offices</li>
+          </ul>
+          <a href="{% url 'contact' %}?service=institutional" class="service-card-link">
+            Request this service
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <span class="service-index">04</span>
+        <div class="service-card-media">
+          <img class="service-slide" src="{% static 'core/img/services/specialized-vacuum.jpg' %}" alt="Covenant Plaza, a commercial building serviced by Lamar Investment">
+          <img class="service-slide" src="{% static 'core/img/services/specialized-carpet.jpg' %}" alt="Modern bathroom, cleaned and sanitized">
+          <img class="service-slide" src="{% static 'core/img/services/specialized-2.jpg' %}" alt="Ornate event venue building">
+          <span class="service-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8h6.1l-4.9 3.6 1.9 5.8-4.9-3.6-4.9 3.6 1.9-5.8L4 8.8h6.1z"/></svg>
+            Specialized
+          </span>
+        </div>
+        <div class="service-card-body">
+          <h3>Specialized Cleaning</h3>
+          <p class="service-card-sub">Deep &amp; post-event</p>
+          <p>Jobs that go beyond routine upkeep — handled by a team equipped for heavier or one-off work.</p>
+          <ul>
+            <li>Carpet cleaning</li>
+            <li>Washroom sanitation</li>
+            <li>Post-construction cleaning</li>
+            <li>Event cleaning services</li>
+            <li>Waste collection and disposal</li>
+          </ul>
+          <a href="{% url 'contact' %}?service=specialized" class="service-card-link">
+            Request this service
+            <span class="card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Not sure which service you need?</h2>
+        <p>Describe the space and we'll recommend the right scope.</p>
+      </div>
+      <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

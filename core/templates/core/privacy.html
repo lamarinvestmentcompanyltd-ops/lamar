@@ -1,0 +1,72 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Privacy Policy — Lamar Investment Company Ltd{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(90deg, rgba(10,53,88,0.72) 0%, rgba(10,53,88,0.48) 40%, rgba(10,53,88,0.15) 68%, rgba(10,53,88,0.0) 92%), url('{% static 'core/img/hero-cart.png' %}'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="page-hero-eyebrow">Lamar Investment Company Ltd</span>
+    <h1>Privacy Policy</h1>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{% url 'home' %}">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Privacy Policy</span>
+    </nav>
+  </div>
+  <span class="page-hero-dots"></span>
+  <span class="page-hero-rule"></span>
+</section>
+
+<section>
+  <div class="container">
+    <div class="policy-body">
+      <p>Last updated: {% now "F Y" %}</p>
+      <h3>What we collect</h3>
+      <p>
+        When you submit the contact form on this website, we collect your name,
+        email address, phone number (if provided), the type of cleaning service
+        you're asking about, and the message you send us.
+      </p>
+
+      <h3>How we use it</h3>
+      <p>
+        We use this information only to respond to your inquiry, prepare a quote,
+        and arrange the service you've requested. We do not sell, rent, or share
+        your information with third parties for marketing purposes.
+      </p>
+
+      <h3>How it's stored</h3>
+      <p>
+        Inquiry details are stored securely in our website's database and are
+        accessible only to authorized Lamar Investment Company staff who need
+        them to respond to your request.
+      </p>
+
+      <h3>Cookies &amp; Analytics</h3>
+      <p>
+        Basic session cookies support core site functionality (such as showing
+        a confirmation message after you submit a form). This site may also use
+        Google Analytics to understand how visitors use the site (e.g. which
+        pages are viewed) — this data is aggregated and not used to
+        individually identify you. We do not use advertising cookies or sell
+        any data collected here.
+      </p>
+
+      <h3>Your rights</h3>
+      <p>
+        You can ask us at any time to tell you what information we hold about
+        you, or to correct or delete it. Contact us using the details below and
+        we'll respond promptly.
+      </p>
+
+      <h3>Contact us about privacy</h3>
+      <p>
+        Email <a href="mailto:info@lamarinvestment.rw">info@lamarinvestment.rw</a>
+        or reach us via the <a href="{% url 'contact' %}">Contact page</a> with
+        any questions about how your information is handled.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

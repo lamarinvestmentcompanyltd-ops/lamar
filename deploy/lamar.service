@@ -1,0 +1,17 @@
+# /etc/systemd/system/lamar.service  - keeps the site running and restarts it after a reboot
+[Unit]
+Description=Lamar website (gunicorn)
+After=network.target
+
+[Service]
+User=lamar
+Group=www-data
+WorkingDirectory=/srv/lamar/app
+EnvironmentFile=/srv/lamar/.env
+ExecStart=/srv/lamar/venv/bin/gunicorn lamar_project.wsgi \
+          --workers 3 --bind unix:/run/lamar.sock --access-logfile -
+Restart=always
+RuntimeDirectory=lamar
+
+[Install]
+WantedBy=multi-user.target

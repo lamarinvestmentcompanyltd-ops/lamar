@@ -1,0 +1,74 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Our Materials — Lamar Investment Company Ltd{% endblock %}
+{% block meta_description %}The cleaning products, equipment and safety gear Lamar Investment Company Ltd uses on every job across Kigali.{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: linear-gradient(90deg, rgba(10,53,88,0.72) 0%, rgba(10,53,88,0.48) 40%, rgba(10,53,88,0.15) 68%, rgba(10,53,88,0.0) 92%), url('{% static 'core/img/hero-cart.png' %}'); background-size: cover; background-position: center;">
+  <div class="container">
+    <span class="page-hero-eyebrow">Lamar Investment Company Ltd</span>
+    <h1>Our Materials</h1>
+    <p class="page-hero-lede">The products, equipment and protective gear we bring to every job — chosen for results and for safety.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{% url 'home' %}">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Our Materials</span>
+    </nav>
+  </div>
+  <span class="page-hero-dots"></span>
+  <span class="page-hero-rule"></span>
+</section>
+
+<section>
+  <div class="container">
+    {% if groups %}
+      {% for group in groups %}
+        <div class="material-group">
+          <div class="section-head">
+            <div class="ribbon-rule"></div>
+            <h2>{{ group.label }}</h2>
+          </div>
+          <div class="material-grid">
+            {% for item in group.items %}
+              <article class="material-card">
+                {% if item.image %}
+                  <div class="material-media">
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                  </div>
+                {% else %}
+                  <div class="material-media material-media-empty">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="m3 15 5-5 4 4 3-3 6 6"/><circle cx="8.5" cy="8.5" r="1.5"/></svg>
+                  </div>
+                {% endif %}
+                <div class="material-body">
+                  <h3>{{ item.name }}</h3>
+                  {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="empty-state">
+        <h3>Materials are being added</h3>
+        <p>We're putting together the list of products and equipment we use. In the meantime, get in touch and we'll walk you through it directly.</p>
+        <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h2>Questions about what we use?</h2>
+        <p>Happy to share product details, safety data sheets, or swap in something you prefer.</p>
+      </div>
+      <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
